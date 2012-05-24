@@ -1,0 +1,72 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              blank: '必填项，不能为空!'
+            email:
+              blank: '必填项，不能为空!'
+            password:
+              blank: '必填项，不能为空!'
+        comic:
+          attributes:
+            comic_page:
+              blank: '必填项，不能为空!'
+            xpath_title:
+              blank: '必填项，不能为空!'
+            xpath_image: 
+              blank: '必填项，不能为空!'
+        post:
+          attributes:
+            title: 
+              blank: '必填项，不能为空!'
+            body:
+              blank: '必填项，不能为空!'
+    models:
+      user: '用户'
+    attributes:
+      user:
+        username: "用户名"
+        password: "密码"
+        password_confirmation: "确认密码"
+        current_password: "当前密码"
+      comic:
+        name: '名称'
+        homepage: "主页"
+        comic_page: "漫画页面"
+        xpath_title: "标题路径"
+        xpath_image: "图片路径"
+      post:
+        title: '标题'
+        body: '具体描述'
+  activemodel:
+    attributes:
+      user:
+        login: "用户名或邮箱"
+  flash:
+    comics:
+      create:
+        notice: "漫画添加成功！"
+        alert: "存在错误，漫画不能保存！"
+      update:
+        notice: "漫画更新成功！"
+        alert: "存在错误，漫画不能保存！"
+      destroy:
+        notice: "漫画删除成功！"
+        alert: "存在错误，漫画不能删除！"
+    posts:
+      create:
+        notice: "文章发表成功！"
+        alert: "存在错误，文章不能保存！"
+      update:
+        notice: "文章更新成功！"
+        alert: "存在错误，文章不能更新！"
+      destroy:
+        notice: "文章删除成功！"
+        alert: "存在错误，文章不能删除！"
+    suggestions:
+      create:
+        notice: "非常感谢您提交漫画的建议！"
+        alert: "存在错误，请您检查建议是否填写完整。"

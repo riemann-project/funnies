@@ -1,0 +1,7 @@
+%h2 请求重置账号锁定
+= semantic_form_for resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post } do |f|
+  = f.inputs do
+    = f.input :email, hint: "mal@firefly.com", input_html: { placeholder: "mal@firefly.com" }
+  = f.buttons do
+    = f.commit_button label: "请求重置锁定"
+= render :partial => "devise/shared/links"

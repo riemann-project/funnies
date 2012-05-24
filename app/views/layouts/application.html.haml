@@ -1,0 +1,21 @@
+!!!
+/[if IE 7 ] <html lang="en" class="no-js ie7">
+/[if IE 8 ] <html lang="en" class="no-js ie8">
+/[if IE 9 ] <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+%head
+  %meta{charset: "utf-8"}
+  %title 欢迎来到 funniesapp 漫画世界！
+  = stylesheet_link_tag "funnies"
+  = csrf_meta_tag
+%body
+  - if flash[:notice] || flash[:alert]
+    %div{:class => "notice #{'alert' if flash[:alert]}"}
+      = flash[:notice] || flash[:alert]
+  = render "shared/header"
+  %section#wrap.clearfix
+    %section#content{class: controller_class}
+      = yield
+  = render "shared/footer"
+  = javascript_include_tag "application"
+  = render "shared/analytics"

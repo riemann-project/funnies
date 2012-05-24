@@ -1,0 +1,17 @@
+- comics.each do |comic|
+  %article.comic
+    %header.title
+      %h4= link_to comic.name, comic.homepage
+    .comic_strip
+      - if comic.comic_strips.any?
+        = image_tag comic.comic_strips.last.comic_image_url
+      - else
+        %h5 不好意思，还没有漫画系列在此连载。
+  %ul.comic_nav
+    - if current_user.subscribed?(comic)
+      %li= link_to "取消订阅", comic_subscriptions_path(comic), method: :delete, class: "button unsubscribe"
+    - else
+      %li= link_to "订阅", comic_subscriptions_path(comic), method: :post, class: "button subscribe"
+    - if current_user.admin?
+      %li= link_to "编辑此漫画", edit_comic_path(comic), class: "button admin_button"
+      %li= link_to "删除此漫画", comic_path(comic), method: :delete, confirm: "您真的要删除此漫画吗？", class: "button admin_button"

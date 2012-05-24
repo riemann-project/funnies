@@ -1,0 +1,59 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+en:
+  errors:
+    messages:
+      expired: "已过期，请申请一个新的"
+      not_found: "未找到"
+      already_confirmed: "已经证实，请尝试连接"
+      not_locked: "未锁定"
+      not_saved:
+        one: "存在一个错误，使得%{resource}不能被保存！"
+        other: "存在%{count}个错误，使得%{resource}不能被保存！"
+
+  devise:
+    failure:
+      already_authenticated: '您已经处于登录状态！'
+      unauthenticated: '你必须登录或注册才能继续进行'
+      unconfirmed: '您必须确认您的帐户才能继续'
+      locked: '您的帐户被锁定。'
+      invalid: '用户名或密码不正确'
+      invalid_token: '验证码不正确'
+      timeout: '您的会话已过期，请重新登录继续。'
+      inactive: '您的帐户被激活。'
+      user:
+        invalid: '请填写必要的信息！'
+    sessions:
+      signed_in: '登录成功'
+      signed_out: '注销成功'
+    passwords:
+      send_instructions: '几分钟内，您将会收到一封邮件，以确认重置您的密码。'
+      updated: '您的密码已成功更改，并且您现在处于登录状态！'
+      updated_not_active: '你的密码已成功更改。'
+      send_paranoid_instructions: "如果您的E-mail我们的数据库中存在，您将收到您的E-mail上的密码恢复链接"
+    confirmations:
+      send_instructions: '如何在几分钟内确认您的帐户的说明，您将收到一封电子邮件。'
+      send_paranoid_instructions: '如果您的E-mail，我们的数据库中，您将收到一封电子邮件，如何在几分钟内确认您的帐户的说明。'
+      confirmed: '您的帐户已成功证实。你现在登录。'
+    registrations:
+      signed_up: '欢迎！你已经成功地签署了。'
+      signed_up_but_unconfirmed: '一个一个确认链接的邮件已发送到您的电子邮件地址。请打开链接激活您的帐户。'
+      signed_up_but_inactive: '你已经成功地签署了。但是，我们可以不签你，因为您的帐户尚未启动。'
+      signed_up_but_locked: '你已经成功地签署了。但是，我们可以不签你，因为你的帐户被锁定。'
+      updated: '你更新你的帐户成功。'
+      update_needs_confirmation: "你更新你的帐户成功，但我们需要验证新的电子邮件地址。请检查您的电子邮件，并点击确认链接，完成确认新的电子邮件地址。"
+      destroyed: '再见！您的帐户已成功取消。我们希望尽快再次见到你。'
+    unlocks:
+      send_instructions: '说明如何解除您的帐户，在几分钟内，您将收到一封电子邮件。'
+      unlocked: '您的帐户已成功解锁。请继续。'
+      send_paranoid_instructions: '如果您的账号存在，几分钟内您将会收到一封邮件，它会告诉您如何解锁。'
+    omniauth_callbacks:
+      success: '%{kind} 账号成功验证！'
+      failure: '%{kind} 不能完成验证，因为存在"%{reason}"错误！'
+    mailer:
+      confirmation_instructions:
+        subject: '确认锁定'
+      reset_password_instructions:
+        subject: '请求重置密码'
+      unlock_instructions:
+        subject: '解除锁定'

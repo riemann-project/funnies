@@ -1,0 +1,10 @@
+%h2 注册界面
+= semantic_form_for resource, as: resource_name, url: registration_path(resource_name) do |f|
+  = f.inputs do
+    = f.input :username, input_html: { placeholder: "mal" }
+    = f.input :email, hint: "mal@firefly.com", input_html: { placeholder: "mal@firefly.com" }
+    = f.input :password, hint: "至少6个字符！"
+    = f.input :password_confirmation
+  = f.buttons do
+    = f.commit_button label: "注册"
+= render :partial => "devise/shared/links"

@@ -1,0 +1,14 @@
+- unless params[:username]
+  #suggestion
+    %h3 列表里没有我想看的漫画？ #{link_to "建议添加", new_suggestion_path}
+
+- if comics.any?
+  = render :partial => 'comic'
+- else
+  - if params[:username]
+    - if params[:username] == current_user.username
+      %h1 您还没有订阅任何的漫画，#{link_to "点击进入", comics_path} 漫画列表订阅！
+    - else
+      %h1 您还没有订阅任何的漫画。
+  - else
+    %h1 不好意思，当前系统还没有任何漫画可阅读。

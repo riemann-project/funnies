@@ -1,0 +1,12 @@
+- posts.each do |post|
+  %article
+    %header
+      %h1= post.title
+      = gravatar_for(post.user, size: 20)
+      %span= post.user.username
+      %time{datetime: post.created_at.strftime("%F")}= post.created_at.strftime("%d, %b %Y")
+    =raw RDiscount.new(post.body, :smart).to_html
+    - if user_signed_in? && current_user.admin?
+      %nav.admin-menu
+        = link_to "编辑此文", edit_post_path(post), class: "button admin_button"
+        = link_to "删除此文", post_path(post), method: :delete, confirm: "你真的确实要删除此文？", class: "button admin_button"

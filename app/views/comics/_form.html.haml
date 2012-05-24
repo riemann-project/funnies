@@ -1,0 +1,10 @@
+= semantic_form_for comic do |f|
+  = f.semantic_errors
+  = f.inputs do
+    = f.input :name
+    = f.input :homepage
+    = f.input :comic_page
+    = f.input :xpath_title
+    = f.input :xpath_image
+  = f.buttons do
+    = f.commit_button label: "保存"

@@ -1,0 +1,12 @@
+.bundle
+.DS_Store
+log/*.log
+tmp/
+coverage
+public/stylesheets/*
+config/database.yml
+config/appconfig.yml
+public/images/comics/
+.sass_cache
+vendor/gems
+bin

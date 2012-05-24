@@ -1,0 +1,4 @@
+# Hello robots! How are you today?
+# Please index my site :)
+
+User-agent: *

@@ -1,0 +1,7 @@
+%h2 重发确认信息
+= semantic_form_for resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post } do |f|
+  = f.inputs do
+    = f.input :email, hint: "mal@firefly.com", input_html: { placeholder: "mal@firefly.com" }
+  = f.buttons do
+    = f.commit_button label: "发送!"
+= render :partial => "devise/shared/links"

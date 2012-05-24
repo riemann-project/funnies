@@ -1,0 +1,8 @@
+%h2 登录界面
+= semantic_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+  = f.inputs do
+    = f.input :login, label: "用户名或邮箱"
+    = f.input :password, label: "密码 #{link_to '忘记密码？', new_user_password_url}".html_safe
+  = f.buttons do
+    = f.commit_button :label => "登录"
+= render :partial => "devise/shared/links"
